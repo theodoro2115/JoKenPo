@@ -1,0 +1,138 @@
+/* Importando a fonte de estilo pixel (Press Start 2P) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+ 
+/* Estilo geral */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden; /* Evitar rolagem */
+}
+ 
+/* Container principal do jogo */
+.jokenpo {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ 
+/* Área de jogo (do jogador e do computador) */
+.area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+    width: 250px;
+    height: 400px;
+}
+ 
+/* Estilo das pontuações */
+.pontuacao {
+    font-size: 30px;
+    color: #f0a500;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 3px solid #f0a500;
+    border-radius: 10px;
+    background-color: rgba(255, 165, 0, 0.2);
+}
+ 
+.pontuacao h4 {
+    margin: 0;
+}
+ 
+.pontuacao p {
+    margin: 0;
+}
+ 
+/* Estilo para as imagens de pedra, papel e tesoura */
+.escolha img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+ 
+/* Efeito de hover nas imagens */
+.escolha img:hover {
+    transform: scale(1.1);
+}
+ 
+/* Estilo do botão */
+button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ff7f00;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 127, 0, 0.7);
+    transition: all 0.3s;
+    margin-top: 20px;
+}
+ 
+/* Efeito de hover no botão */
+button:hover {
+    background-color: #ff4500;
+    box-shadow: 0 0 25px rgba(255, 69, 0, 0.7);
+}
+ 
+/* Estilo para a escolha do computador */
+.escolha-pc img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    filter: brightness(50%);
+    transition: transform 0.3s, filter 0.3s;
+}
+ 
+/* Efeito de revelar a escolha do computador */
+.escolha-pc img.active {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+ 
+/* Ajustando a largura das imagens para uma visualização balanceada */
+.escolha, .escolha-pc {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+ 
+/* Garantindo que as imagens se ajustem corretamente ao tamanho da tela */
+.area {
+    width: 300px;
+}
+ 
+.pontuacao {
+    font-size: 28px;
+}
+ 
+button {
+    width: 250px;
+}
+ 
+.escolha img {
+    width: 90px;
+    height: 90px;
+}
